@@ -6,6 +6,9 @@ def load_data(file_path):
                      low_memory=False)  # Set low_memory=False to ensure that datatype inference is done correctly
     return df
 
+def save_data(df, file_path):
+    """Save the dataset to a CSV file."""
+    df.to_csv(file_path, index=False, sep="|")
 
 def clean_data(df):
     """
